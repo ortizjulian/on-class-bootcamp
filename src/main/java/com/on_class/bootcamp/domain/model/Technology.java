@@ -1,17 +1,19 @@
 package com.on_class.bootcamp.domain.model;
 
-import java.util.List;
-
-public class Capability {
+public class Technology {
     private Long id;
     private String name;
-    private List<Technology> technologies;
 
-    public Capability() {
+    public Technology() {
     }
 
-    public Capability(Long id) {
+    public Technology(Long id) {
         this.id = id;
+    }
+
+    public Technology(Long id, String name) {
+        this.id = id;
+        this.name = name;
     }
 
     public Long getId() {
@@ -28,13 +30,5 @@ public class Capability {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public List<Technology> getTechnologies() {
-        return technologies;
-    }
-
-    public void setTechnologies(List<Technology> technologies) {
-        this.technologies = technologies;
     }
 }

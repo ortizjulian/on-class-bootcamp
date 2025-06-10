@@ -23,6 +23,15 @@ public class Bootcamp {
         this.capabilities = capabilities;
     }
 
+    public Bootcamp(Long id, String name, String description, LocalDate launchDate, Integer duration, List<Capability> capabilities) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.launchDate = launchDate;
+        this.duration = duration;
+        this.capabilities = capabilities;
+    }
+
     public Long getId() {
         return id;
     }

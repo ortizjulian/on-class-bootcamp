@@ -6,6 +6,7 @@ import com.on_class.bootcamp.domain.spi.ICapabilityExternalPort;
 import com.on_class.bootcamp.domain.usecase.BootcampUseCase;
 import com.on_class.bootcamp.infrastructure.adapters.webclient.CapabilityAdapter;
 import com.on_class.bootcamp.infrastructure.adapters.webclient.mapper.IBootcampCapabilitiesMapper;
+import com.on_class.bootcamp.infrastructure.adapters.webclient.mapper.IBootcampRequestDtoMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,6 +19,7 @@ public class BeanConfiguration {
     private final CapabilityProperties capabilityProperties;
     private final IBootcampPersistencePort bootcampPersistencePort;
     private final IBootcampCapabilitiesMapper bootcampCapabilitiesMapper;
+    private final IBootcampRequestDtoMapper bootcampRequestDtoMapper;
 
     @Bean
     public IBootcampServicePort bootcampServicePort(ICapabilityExternalPort capabilityExternalPort){
@@ -26,7 +28,7 @@ public class BeanConfiguration {
 
     @Bean
     public ICapabilityExternalPort capabilityExternalPort(WebClient webClient) {
-        return new CapabilityAdapter(webClient, bootcampCapabilitiesMapper);
+        return new CapabilityAdapter(webClient, bootcampCapabilitiesMapper,bootcampRequestDtoMapper);
     }
 
     @Bean
