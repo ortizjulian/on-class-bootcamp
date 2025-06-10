@@ -5,6 +5,8 @@ import com.on_class.bootcamp.infrastructure.adapters.persistence.entity.Bootcamp
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 
+import java.util.List;
+
 @Mapper(componentModel = "spring",
         unmappedTargetPolicy = ReportingPolicy.IGNORE,
         unmappedSourcePolicy = ReportingPolicy.IGNORE)
@@ -20,6 +22,6 @@ public interface IBootcampEntityMapper {
     }
 
     Bootcamp toBootcamp(BootcampEntity bootcampEntity);
-
+    List<Bootcamp> toBootcamps(List<BootcampEntity> bootcampEntityList);
 }
 
