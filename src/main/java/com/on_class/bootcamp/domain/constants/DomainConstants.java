@@ -31,7 +31,7 @@ public class DomainConstants {
     public static final String EXCEPTION_PAGINATION_SORT_FIELD = "The sort by must be name or capabilityQuantity.";
     //Capabilities sort options
     public static final String BOOTCAMP_SORT_BY_NAME = "name";
-    public static final String BOOTCAMP_SORT_BY_CAPABILITY_QUANTITY = "capabilityQuantity";
+    public static final String BOOTCAMP_SORT_BY_CAPABILITY_QUANTITY = "capabilityquantity";
 
     public static final String SORT_BY_ASC = "ASC";
     public static final String SORT_BY_DESC = "DESC";
